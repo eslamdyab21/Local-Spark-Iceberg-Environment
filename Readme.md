@@ -1,7 +1,7 @@
-# ** Local Spark Iceberg Environment **
+# **Local Spark Iceberg Environment**
 
 
-## ** How To Run**
+## **How To Run**
 - Start by downloading the jar files needed for spark
 -- `iceberg-spark-runtime`
 -- `hadoop-aws`
@@ -21,11 +21,20 @@ docker compose up -d
 ```
 
 - Check environment
-hit `localhost:8080` in your browser, you should see your spark master with 3 workers
+Hit `localhost:8080` in your browser, you should see your spark master with 3 workers
 
 
+Run test scripts
+```bash
+docker exec -it spark-master /opt/spark/bin/spark-submit  --master spark://spark-master:7077   /opt/spark/data/iceberg_write_test.py
+```
 
-## ** Storage Engine**
+```bash
+docker exec -it spark-master /opt/spark/bin/spark-submit  --master spark://spark-master:7077   /opt/spark/data/iceberg_read_test.py
+```
+
+
+## **Storage Engine**
 In this environment i used Minio, you can run it separately on your local machine, 
 or you can use the following docker compose file
 
