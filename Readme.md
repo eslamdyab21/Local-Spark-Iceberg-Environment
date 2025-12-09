@@ -3,10 +3,10 @@
 
 ## **How To Run**
 - Start by downloading the jar files needed for spark
--- `iceberg-spark-runtime`
--- `hadoop-aws`
--- `aws-java-sdk`
--- `postgresql-jdbc`
+    - `iceberg-spark-runtime`
+    - `hadoop-aws`
+    - `aws-java-sdk`
+    - `postgresql-jdbc`
 
 ```bash
 chmod +x jars.sh
@@ -24,12 +24,12 @@ docker compose up -d
 
 <br/>
 
-- Check environment
+## **Check Environment**
 
-Hit `localhost:8080` in your browser, you should see your spark master with 3 workers
+- Hit `localhost:8080` in your browser, you should see your spark master with 3 workers
 
 
-Run test scripts
+- Run test scripts
 ```bash
 docker exec -it spark-master /opt/spark/bin/spark-submit  --master spark://spark-master:7077   /opt/spark/data/iceberg_write_test.py
 ```
