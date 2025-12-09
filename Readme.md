@@ -13,6 +13,8 @@ chmod +x jars.sh
 ./jars.sh
 ```
 
+<br/>
+<br/>
 
 - Pull and run docker images
 
@@ -20,7 +22,10 @@ chmod +x jars.sh
 docker compose up -d
 ```
 
+<br/>
+
 - Check environment
+
 Hit `localhost:8080` in your browser, you should see your spark master with 3 workers
 
 
@@ -33,6 +38,9 @@ docker exec -it spark-master /opt/spark/bin/spark-submit  --master spark://spark
 docker exec -it spark-master /opt/spark/bin/spark-submit  --master spark://spark-master:7077   /opt/spark/data/iceberg_read_test.py
 ```
 
+
+<br/>
+<br/>
 
 ## **Storage Engine**
 In this environment i used Minio, you can run it separately on your local machine, 
